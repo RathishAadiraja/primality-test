@@ -1,0 +1,161 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #040D21;
+    z-index: -1;
+
+}
+
+h1,h2,h3,h4{
+    margin: 0 auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#all-contents{
+    text-align: center;
+    margin: 5% 10%;
+}
+
+#app-name{
+    color: azure;
+    font-size: xx-large;
+}
+
+#app-heading{
+    margin: 30px 5px;
+}
+
+#input-section{
+    margin: 5%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.input-label{
+    color: azure;
+    margin: 20px;
+    font-size: x-large;
+}
+
+#input-number{
+    outline: 0;
+    margin: 50px 10px;
+    width: 300px;
+    padding: 10px;
+    border-width: 0 0 3px;
+    border-color: azure;
+    color: azure;
+    background: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    text-align: center;
+
+}
+
+::placeholder {
+    color: azure;
+    font-size: large;
+    text-align: center;
+}
+
+
+#submit-number{
+    margin: 20px;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 200px;
+    color: #02152A;
+    background-color: azure;
+    border: none;
+    font-size: 20px;
+    transition: all 0.5s;
+    border-radius: 20px;
+
+}
+
+
+#submit-number:hover{
+    cursor: pointer;
+    box-shadow: 0 0.5em 0.7em -0.5em azure;
+}
+
+#display-result{
+    transition: all 0.3s;
+}
+
+.result{
+    color: azure;
+    font-size: large;
+    word-break: break-all;
+    letter-spacing: 1px;
+}
+
+#prime{
+    color: azure;
+    background-color: #1e90ff; 
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: large;
+}
+
+#not-prime{
+    color: azure;
+    background-color: #DE3778;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: large;
+}
+
+
+@media screen and (max-width: 992px) {
+    #all-contents{
+        margin: 10% 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #all-contents{
+        margin: 20% 5%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    #app-name{
+        font-size: x-large;
+    }
+    #input-section{
+        margin: 0px;
+    }
+    #input-number{
+        margin: 40px 0px;
+        width: 250px;
+    }
+    .input-label{
+        margin: 30px 20px;
+        font-size: large;
+    }
+    #submit-number{
+        margin: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #app-name{
+        font-size: large;
+    }
+    #input-number{
+        width: 180px;
+    }
+    #submit-number{
+        width: 150px;
+        font-size: 15px;
+    }
+}

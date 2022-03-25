@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <main id="all-contents"> 
+        <header id="app-name">
+            <h1 id="app-heading">PRIMALITY TEST</h1>
+            <h4>[ Specifically for testing large prime numbers ]</h4>
+        </header>
+        <form id="input-section" action="{{ url_for('index') }}" method="post" autocomplete="off">
+            <label class="input-label" for="input-number">Enter the number to test</label>
+            <input type="text" id="input-number" name="input-number" placeholder="Enter here">
+            <button type="submit" id="submit-number">Check</button>
+             
+        </form>
+        <div id="display-result">
+            {% if finalResult %}
+                {% if finalResult[0] %}
+                    {% if finalResult[1] %}
+                        {% if finalResult[2] %}
+                            <p class="result">{{ finalResult[0] }} is </p>
+                            <span id="prime">PRIME</span>
+                        {% else %}
+                            <p class="result">{{ finalResult[0] }} is </p>
+                            <span id="not-prime">NOT PRIME</span>
+                        {% endif %}
+                    {% else %}
+                        <p class="result">{{ finalResult[0] }}</p>
+                    {% endif %}
+                {% endif %}
+            {% endif %} 
+        </div> 
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
