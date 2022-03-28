@@ -1,12 +1,8 @@
-from asyncio.windows_events import NULL
-from email import message
-from flask import Flask, appcontext_popped, render_template, url_for, request
+from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
 
-
-import random
 def calculateJacobiSymbol(a, n): 
 
     jacobi_number = 1
@@ -127,4 +123,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
