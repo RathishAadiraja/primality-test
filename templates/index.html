@@ -17,10 +17,12 @@
             <h4>[ Specifically for testing large prime numbers ]</h4>
         </header>
         <form id="input-section" action="{{ url_for('index') }}" method="post" autocomplete="off">
-            <label class="input-label" for="input-number">Enter the number to test</label>
-            <input type="text" id="input-number" name="input-number" placeholder="Enter here">
+            <label class="input-label" for="input-num">Enter the number to test</label>
+            <div id="input-field">
+                <span id="num">Number</span>
+                <input type="text" id="input-num" name="input-num" placeholder="Enter here">
+            </div>
             <button type="submit" id="submit-number">Check</button>
-             
         </form>
         <div id="display-result">
             {% if finalResult %}

@@ -87,7 +87,7 @@ def solovayStrassen(p):
     
 
 def checkPrime(form):
-    checkNumber = request.form['input-number']
+    checkNumber = request.form['input-num']
     resultMessage = ''
     isValidNumber = False
     isPrime = False

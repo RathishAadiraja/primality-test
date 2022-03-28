@@ -47,20 +47,56 @@ h1,h2,h3,h4{
     margin: 50px 10px;
     width: 300px;
     padding: 10px;
-    border-width: 0 0 3px;
-    border-color: azure;
+    border-width: 0 0 2px;
+    border-color: #405cf5;
     color: azure;
     background: none;
-    font-family: 'Ubuntu', sans-serif;
     font-size: large;
     text-align: center;
 
 }
 
-::placeholder {
+
+
+#input-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 5px;
+    
+}
+
+#num{
+    background-color: #405cf5;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    padding: 16px 20px;
     color: azure;
     font-size: large;
+
+}
+
+#input-num{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #040D21;
+    border-radius: 0px 5px 5px 0px;
+    padding: 15px;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
     text-align: center;
+}
+
+#input-num::placeholder{
+    color: #040D21;
+    font-size: large;
+    text-align: center;
+}
+
+#input-num:focus{
+    outline: none;
 }
 
 
@@ -69,12 +105,12 @@ h1,h2,h3,h4{
     padding: 10px 20px;
     font-family: 'Ubuntu', sans-serif;
     width: 200px;
-    color: #02152A;
-    background-color: azure;
+    color: azure;
+    background-color: #405cf5;
     border: none;
     font-size: 20px;
     transition: all 0.5s;
-    border-radius: 20px;
+    border-radius: 5px;
 
 }
 
@@ -97,18 +133,18 @@ h1,h2,h3,h4{
 
 #prime{
     color: azure;
-    background-color: #1e90ff; 
+    background-color: #00BD68;
     margin-left: 5px;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 3px;
     font-size: large;
 }
 
 #not-prime{
     color: azure;
-    background-color: #DE3778;
+    background-color: #E62143;
     margin-left: 5px;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 3px;
     font-size: large;
 }
@@ -120,17 +156,24 @@ h1,h2,h3,h4{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
     #all-contents{
         margin: 20% 5%;
     }
-}
-
-
-@media screen and (max-width: 450px) {
     #app-name{
         font-size: x-large;
     }
+    #num{
+        padding: 13px 15px;
+    }
+    #input-num{
+        padding: 12px 5px;
+    }
+
+}
+
+
+@media screen and (max-width: 485px) {
     #input-section{
         margin: 0px;
     }
@@ -144,6 +187,17 @@ h1,h2,h3,h4{
     }
     #submit-number{
         margin: 40px 20px;
+        width: 100px;
+    }
+    #num{
+        font-size: medium;
+    }
+    #input-num{
+        width: 170px;
+        font-size: medium;
+    }
+    #input-num::placeholder{
+        font-size: medium;
     }
 }
 
@@ -154,8 +208,14 @@ h1,h2,h3,h4{
     #input-number{
         width: 180px;
     }
+    #num{
+        padding: 9px 10px;
+    }
+    #input-num{
+        padding: 8px;
+        width: 130px;
+    }
     #submit-number{
-        width: 150px;
-        font-size: 15px;
+        padding: 5px 10px;
     }
 }
